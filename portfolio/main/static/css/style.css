@@ -52,7 +52,7 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(./images/kuk.jpg) no-repeat;
+    background: url(../images/blue.png) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -165,4 +165,246 @@ section {
     border-radius: 50%;
     background: crimson;
     transform: translate(-50%);
+} 
+
+.about .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.about .content .col-left {
+    position: relative;
+    width: 45%;
+}
+
+.about .content .col-right {
+    position: relative;
+    width: 45%;
+}
+
+.about .content .img-card {
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+}
+
+.about .content .img-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about .content-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.skills {
+    background: #000016;
+}
+
+.skills .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 20px;
+}
+.skills .col-left {
+    position: relative;
+    width: 45%;
+}
+
+.skills .col-left .content-title {
+    margin-bottom: 20px;
+}
+
+.contact .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.contact .content .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.contact .row .card {
+    background: rgb(129, 186, 159);
+    width: 240px;
+    margin: 20px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, /15%);
+    border-radius: 10px;
+}
+
+.contact .card .contact-icon {
+    color: crimson;
+    font-size: 60px;
+    text-align: center;
+    transition: transform .5s ease;
+}
+
+.contact .card:hover .contact-icon {
+    transform: translateY(-10px);
+}
+
+.contact .card .info h3 {
+    color: #111;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.contact .card .info span {
+    color: rgb(33, 31, 31);
+    font-weight: 500;
+}
+
+.contact-form {
+    background: rgb(235, 221, 221);
+    max-width: 600px;
+    margin-top: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, /15%);
+}
+
+.contact-form h3 {
+    color: #111;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.contact-form .input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea {
+    color: #111;
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    border: 1px solid #111;
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact-form .input-box .send-btn {
+    color: #fff;
+    background-color: crimson;
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.contact-form .input-box .send-btn:hover {
+    background: #fff;
+    color: #000;
+    border: 1px solid #111;
+}
+
+.footer {
+    background: #000016;
+    color: #fff;
+    text-align: center;
+    padding: 34px;
+}
+
+.footer .footer-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer p {
+    margin-top: 10px;
+}
+
+@media (max-width: 1049px) {
+    header {
+        padding: 12px 20px;
+    }
+    
+    header .navigation {
+        display: none;
+    }
+    
+    .menu-btn {
+        position: absolute;
+        background: url(../images/menu.png) no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        margin: 0 20px;
+        cursor: pointer;
+        transition: .4s ease;
+    }
+    
+    section {
+        padding: 80px 20px;
+    }
+
+    .main .content h2 {
+        font-size: 25px;
+    }
+    .main .content h3 {
+        font-size: 35px;
+    }
+    .section-title {
+        font-size: 36px;
+    }
+    .about .content {
+        flex-direction: column;
+    }
+    .about .content .column {
+        position: relative;
+        width: 100%;
+    }
+    .about .content .col-right {
+        margin-top: 40px;
+    }
+    .skills .content {
+        flex-direction: column;
+    }
+    .skills .content .column {
+        position: relative;
+        width: 100%;
+    }
+    .skills .content .col-right {
+        margin-top: 40px;
+    }
+    .contact-form {
+        padding: 35px 40px;
+    }
 }
