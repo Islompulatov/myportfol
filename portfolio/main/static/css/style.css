@@ -21,7 +21,7 @@ header {
     z-index: 999;
 }
 
-header.sticky {
+header.sticky{
     background: rgb(3, 143, 57);
     padding: 10px 100px;
 }
@@ -277,77 +277,49 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    flex-direction: column;
-    margin-top: 40px;
-}
-.projects .content .row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     flex-direction: row;
-    margin: 20px 60px;
+    margin-top: 20px;
 }
 
-.projects .row .icon-box {
-    background: rgb(219, 232, 226);
-    width: 300px;
-    height: 350px;
-    margin-bottom: 20px;
+.title p {
+    width: 80%;
+}
+
+.projects .content .card {
+    background: #fff;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
     padding: 25px;
-    display: flex;
+    justify-self: center;
+    align-items: center;
     flex-direction: column;
-    box-shadow: 0 5px 25px rgba(1, 1, 1, /15%);
+    box-shadow: 0 5px 25px rgba(1 1 1 /15%);
     border-radius: 10px;
 }
 
-.projects .icon-box .projects-icon i {
-    float: left;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    width: 54px;
-    height: 54px;
-    background: #149ddd;
-    border-radius: 50%;
-    transition: 0.5s;
-    border: 1px solid #149ddd;
-}
-
-
-
-.projects .icon-box .project-title {
-    color: #149ddd;
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 15px;
+.projects .card .projects-icon {
+    color: crimson;
+    font-size: 120px;
     text-align: center;
-    margin-bottom: 40px;
-    transition: transform 0.5s ease;
-    
-}
-.projects .icon-box .project-title:hover {
-    transform: translateY(-12px);
+    transition: transform .5s ease;
 }
 
-.projects .btn {
-    color: #fff;
-    background: crimson;
-    font-size: 12px;
-    font-weight: 500;
-    display: inline-block;
-    padding: 8px;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 1px;
-    border-radius: 2px;
-    margin: 50px 0;
-    transition: .5s ease;
+.projects .card .projects-icon:hover {
+    transform: translateY(-10px);
 }
-.projects .btn:hover {
-    background: rgb(240, 244, 241);
-    color: black;
-    border: 1px solid rgb(17, 29, 46);
+
+.projects .card .info {
+    text-align: center;
 }
+
+.projects .card .info h3 {
+    color: crimson;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px;
+}
+
 
 .contact {
     background: #fdfdfd;
@@ -534,7 +506,6 @@ section {
         background-size: 25px;
         background-position: center;
         transition: .3s ease;
-
     }
 
     section {
@@ -567,11 +538,14 @@ section {
         position: relative;
         width: 100%;
     }
-    .skills .content .col-right {
+    .skills .content .col-right { 
         margin-top: 40px;
     }
     
-    .projects .row .icon-box {
+    .projects .content {
+        flex-direction: column;
+    }
+    .projects .content .card {
         position: relative;
         width: 100%;
     }
@@ -585,8 +559,8 @@ section {
 .scrollToTop-btn {
     z-index: 999;
     position: fixed;
-    background: crimson;
-    color: rgb(17, 142, 12);
+    background: rgb(150, 10, 119);
+    color: #fff;
     width: 45px;
     height: 45px;
     right: 0;
@@ -596,5 +570,23 @@ section {
     line-height: 45px;
     border-radius: 3px;
     cursor: pointer;
+    opacity: 0;
+    transition: all .3s ease;
+}
 
+.scrollToTop-btn.active {
+    right: 20px;
+    opacity: 1;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1.3s ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
 }
