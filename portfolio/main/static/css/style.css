@@ -10,7 +10,7 @@
 
 header {
     position: fixed;
-    background: rgba(255, 255, 255, .1);
+    background: rgba(111, 88, 88, 0.1);
     top: 0;
     left: 0;
     width: 100%;
@@ -22,7 +22,7 @@ header {
 }
 
 header.sticky{
-    background: rgb(3, 143, 57);
+    background: #009578;
     padding: 10px 100px;
 }
 
@@ -39,7 +39,7 @@ header .navigation {
 header .navigation a {
     color: #fff;
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     margin-left: 30px;
     transition: .5s ease ;
@@ -126,8 +126,8 @@ section {
     transition: .5s ease;
 }
 .btn:hover {
-    background: rgb(15, 191, 68);
-    color: black;
+    background: rgb(183, 15, 48);
+    color: rgb(77, 3, 18);
 }
 
 .media-icons a {
@@ -216,6 +216,8 @@ section {
     margin-bottom: 20px;
 }
 
+
+
 .skills {
     background: #000016;
 }
@@ -260,12 +262,14 @@ section {
 
 .skills .bxs-badge-check {
     font-size: 1rem;
-    color: var(--first-color);
+    color: #fff;
 }
 
+
+
 .skills-name {
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
+    font-size: 15px;
+    font-weight: 600;
     line-height: 24px;
 }
 
